@@ -49,6 +49,8 @@ def test_find_password_by_email(self):
     
     found_password =  Password.find_by_email(melbyokozi11@gmail.com)
     
+    self.assertEqual(found_password.username,test_password.phone_number)
+    
     
         
            
