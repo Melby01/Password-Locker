@@ -30,7 +30,14 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password()
         test_contact = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
         
+     
     def test_delete_password(self):
+        self.new_password.save_password()
+        test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
+        test_password.save_password()
+        
+        self.new_password.delete_password()
+        self.assertEqual(len(Password.password_list),1)
         
            
 if __name__ == '__main__':
