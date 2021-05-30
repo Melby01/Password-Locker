@@ -40,7 +40,7 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(len(Password.password_list),1)
         
     def delete_password(self):
-        Password.password_list(self)
+        Password.password_list.remove(self)
         
            
 if __name__ == '__main__':
