@@ -2,7 +2,8 @@ import unittest
 from password import Password
 
 class TestPassword(unittest.TestCase):
-   
+    
+    #Test 1
     def setUp(self):
         def test_init(self):
             
@@ -16,9 +17,11 @@ class TestPassword(unittest.TestCase):
         
     def test_save_multiple_password(self):
         self.new_password.save_password()
-        test_password = Password("Test","Melby01","melbyokozi11@gmail.com","0718818642")
+        test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444")
         test_password.save_password()
         self.assertEqual(len(Password.password_list),2)
+        
+    def
            
 if __name__ == '__main__':
     unittest.main()
