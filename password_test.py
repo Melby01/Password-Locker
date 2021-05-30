@@ -80,3 +80,6 @@ def test_password_exists(self):
             
             return False
         
+def test_display_passwords(self):
+    self.assertEqual(Password.display_passwords(),Password.password_list)
+        
