@@ -11,8 +11,8 @@ class Password:
           """
           self.username = username
           self.email = email
-          self.phone_number = number
+          self.phone_number = phone_number
  
          
-new_password = Password( )
-print(new_password)
+new_password = Password("Melby01","melby11@gmail.com","0718818642")
+print(new_password.username)
