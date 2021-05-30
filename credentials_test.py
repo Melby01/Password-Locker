@@ -7,10 +7,8 @@ class TestPassword(unittest.TestCase):
     #Test 1
     def setUp(self):
         def test_init(self):
-            
-            self.assertEqual(self.new_password.username,"Melby01")
-            self.assertEqual(self.new_password.email,"melbyokozi11@gmail.com")
-            self.assertEqual(self.new_password,phone_number,"0718818642")
+             
+            self.assertEqual(self.new_password,number,"0718818642")
             self.assertEqual(self.new_password,password,"Orinah8644")
             
     #Test 2
@@ -21,7 +19,7 @@ class TestPassword(unittest.TestCase):
     #Test 3
     def test_save_multiple_password(self):
         self.new_password.save_password()
-        test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orinah8644")
+        test_password = Password("Test","0798118444","Orinah8644")
         test_password.save_password()
         self.assertEqual(len(Password.password_list),2)
         
@@ -29,12 +27,12 @@ class TestPassword(unittest.TestCase):
         Password.password_list = []
     def test_save_multiple_password(self):
         self.new_password.save_password()
-        test_contact = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
+        test_contact = Password("Test","0798118444","Orina8644")
         
     #Test 4
     def test_delete_password(self):
         self.new_password.save_password()
-        test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
+        test_password = Password("Test","0798118444","Orina8644")
         test_password.save_password()
         
         self.new_password.delete_password()
@@ -44,20 +42,20 @@ class TestPassword(unittest.TestCase):
         Password.password_list.remove(self)
         
     #Test 5  
-    def test_find_password_by_email(self):
+    def test_find_password_by_number(self):
     self.new_password.save_password()
-    test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
+    test_password = Password("Test","0798118444","Orina8644")
     test_password.save_password()
     
-    found_password =  Password.find_by_email(melbyokozi11@gmail.com)
+    found_password =  Password.find_by_number(0718818642)
     
-    self.assertEqual(found_password.username,test_password.phone_number)
+    self.assertEqual(found_password.username,test_password.number)
     
     @classmethod
-    def find_by_email(cls,email):
+    def find_by_number(cls,number):
         
-        for email in cls.password_list:
-            if password.email == email:
+        for number in cls.password_list:
+            if password.number == number:
                 return password
             
 if __name__ == '__main__':
@@ -66,7 +64,7 @@ if __name__ == '__main__':
 def test_password_exists(self):
         
         self.new_password.save_password()
-        test_password = Password("Melby01", "melbyokozi11@gmail.com", "0718818642", "Orinah8644")  
+        test_password = Password("0718818642", "Orinah8644")  
         test_password.save_password()
 
         password_exists = Password.password_exist("Orinah8644")
