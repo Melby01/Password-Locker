@@ -17,5 +17,5 @@ def __init__(self, username, email, phone_number):
           self.phone_number = phone_number
  
          
-new_password = Password("Melby01","melby11@gmail.com","0718818642")
+new_password = Password("Melby01", "melbyokozi11@gmail.com", "0718818642")
 print(new_password)
