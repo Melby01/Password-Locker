@@ -15,4 +15,4 @@ class Password:
  
          
 new_password = Password("Melby01","melby11@gmail.com","0718818642")
-print(new_password.username)
+print(new_password)
