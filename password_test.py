@@ -42,6 +42,15 @@ class TestPassword(unittest.TestCase):
     def delete_password(self):
         Password.password_list.remove(self)
         
+def test_find_password_by_email(self):
+    self.new_password.save_password()
+    test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444","Orina8644")
+    test_password.save_password()
+    
+    found_password =  Password.find_by_email(melbyokozi11@gmail.com)
+    
+    
+        
            
 if __name__ == '__main__':
     unittest.main()
