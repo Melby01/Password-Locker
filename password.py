@@ -1,5 +1,8 @@
 class Password:
-     def __init__(self, username, email, phone_number):
+    """
+    Class that generates new instances of passwords.
+    """
+    def __init__(self, username, email, phone_number):
          
           """
           username: New password username.
