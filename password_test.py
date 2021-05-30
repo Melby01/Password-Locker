@@ -16,6 +16,7 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password() 
         self.assertEqual(len(Password.password_list),1)
         
+    #Test 3
     def test_save_multiple_password(self):
         self.new_password.save_password()
         test_password = Password("Test","Okozi01","okozimelby11@gmail.com","0798118444")
