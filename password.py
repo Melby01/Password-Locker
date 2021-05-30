@@ -2,7 +2,9 @@ class Password:
     pass 
   #Class that generates new instances of passwords.
   
-    password_list = []
+password_list = []
+def save_password(self):
+      Password.password_list.append(self)
   
 def __init__(self, username, email, phone_number):
           
