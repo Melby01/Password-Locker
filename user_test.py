@@ -1,5 +1,6 @@
 import unittest # Importing the unittest module
 from user import User # Importing the user class
+import pyperclip
 
 class TestUser(unittest.TestCase):
 
@@ -12,13 +13,13 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("vugutsa","5657") # create user object
+        self.new_user = User("Melby","5657") # create user object
     def test_init(self):
         '''
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.user_name,"vugutsa")
+        self.assertEqual(self.new_user.user_name,"Melby01")
         self.assertEqual(self.new_user.password,"5657")
         
     def test_save_user(self):
@@ -47,7 +48,7 @@ class TestUser(unittest.TestCase):
             test_user.save_user()
             self.assertEqual(len(User.user_list),2)
         
-        # More tests above
+         
     def test_delete_user(self):
             '''
             test_delete_user to test if we can remove a user from our user list

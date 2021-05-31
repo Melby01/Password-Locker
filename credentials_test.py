@@ -43,7 +43,7 @@ class TestPassword(unittest.TestCase):
         
     #Test 5  
     def test_find_password_by_number(self):
-    self.new_password.save_password()
+     self.new_password.save_password()
     test_password = Password("Test","0798118444","Orina8644")
     test_password.save_password()
     
@@ -58,8 +58,7 @@ class TestPassword(unittest.TestCase):
             if password.number == number:
                 return password
             
-if __name__ == '__main__':
-    unittest.main()
+ 
     
 def test_password_exists(self):
         
